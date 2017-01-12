@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "463582685492",
+    "firebase_url": "https://boar-4dd65.firebaseio.com",
+    "project_id": "boar-4dd65",
+    "storage_bucket": "boar-4dd65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463582685492:android:aff125c77fe6b25b",
+        "android_client_info": {
+          "package_name": "co.beangry.boar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463582685492-8u8nfsmugo3ufu8j3ipfof2tuthi6rd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZGdqP0W75VAEskg7DSUq2BGZhMxdXI1g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
