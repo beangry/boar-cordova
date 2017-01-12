@@ -1,28 +1,49 @@
 var fs = require('fs')
 var path = require('path')
 
-var android = [{
-    density: 'ldpi',
-    path: 'artwork/icons/android/android-ldpi.png'
-}, {
-    density: 'mdpi',
-    path: 'artwork/icons/android/android-mdpi.png'
-}, {
-    density: 'tvdpi',
-    path: 'artwork/icons/android/android-tvdpi.png'
-}, {
-    density: 'hdpi',
-    path: 'artwork/icons/android/android-hdpi.png'
-}, {
-    density: 'xhdpi',
-    path: 'artwork/icons/android/android-xhdpi.png'
-}, {
-    density: 'xxhdpi',
-    path: 'artwork/icons/android/android-xxhdpi.png'
-}, {
-    density: 'xxxhdpi',
-    path: 'artwork/icons/android/android-xxxhdpi.png'
-}]
+var android = {
+    launcher: [{
+        density: 'ldpi',
+        path: 'artwork/icons/android/android-ldpi.png'
+    }, {
+        density: 'mdpi',
+        path: 'artwork/icons/android/android-mdpi.png'
+    }, {
+        density: 'tvdpi',
+        path: 'artwork/icons/android/android-tvdpi.png'
+    }, {
+        density: 'hdpi',
+        path: 'artwork/icons/android/android-hdpi.png'
+    }, {
+        density: 'xhdpi',
+        path: 'artwork/icons/android/android-xhdpi.png'
+    }, {
+        density: 'xxhdpi',
+        path: 'artwork/icons/android/android-xxhdpi.png'
+    }, {
+        density: 'xxxhdpi',
+        path: 'artwork/icons/android/android-xxxhdpi.png'
+    }],
+    notification: [{
+        density: 'hdpi',
+        path: 'artwork/icons/android/notification-hdpi.png'
+    }, {
+        density: 'ldpi',
+        path: 'artwork/icons/android/notification-ldpi.png'
+    }, {
+        density: 'mdpi',
+        path: 'artwork/icons/android/notification-mdpi.png'
+    }, {
+        density: 'xhdpi',
+        path: 'artwork/icons/android/notification-xhdpi.png'
+    }, {
+        density: 'xxhdpi',
+        path: 'artwork/icons/android/notification-xxhdpi.png'
+    }, {
+        density: 'xxxhdpi',
+        path: 'artwork/icons/android/notification-xxxhdpi.png'
+    }]
+}
 
 var ios = {
     icons: {
@@ -50,14 +71,24 @@ var ios = {
 }
 
 module.exports = function(context) {
-    // android
+    // android - launcher
 
-    android.forEach(function(icon) {
+    android.launcher.forEach(function(icon) {
         var destination = 'platforms/android/res/mipmap-' + icon.density
 
         createDir(destination)
 
         fs.createReadStream(icon.path).pipe(fs.createWriteStream(destination + '/icon.png'))
+    })
+
+    // android - notification
+
+    android.notification.forEach(function(icon) {
+        var destination = 'platforms/android/res/drawable-' + icon.density
+
+        createDir(destination)
+
+        fs.createReadStream(icon.path).pipe(fs.createWriteStream(destination + '/fcm_push_icon.png'))
     })
 
     // ios - icons
