@@ -18,6 +18,8 @@
 	<platform name="ios">
 		<allow-intent href="itms:*"/>
 		<allow-intent href="itms-apps:*"/>
+		<preference name="StatusBarBackgroundColor" value="#FFFFFF"/>
+		<preference name="StatusBarStyle" value="default"/>
 	</platform>
 	<engine name="ios" spec="~4.3.1"/>
 	<engine name="android" spec="~6.0.0"/>
@@ -26,7 +28,5 @@
 	<plugin name="cordova-plugin-fcm" spec="~1.1.5"/>
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="StatusBarOverlaysWebView" value="false"/>
-	<preference name="StatusBarBackgroundColor" value="#8E8485"/>
-	<preference name="StatusBarStyle" value="lightcontent"/>
 	<hook type="before_prepare" src="scripts/artwork.js"/>
 </widget>
