@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.beangry.boar" version="1.0.0" android-versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="1" id="co.beangry.boar" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 	<name>Boar</name>
 	<description>Be angry</description>
 	<author email="hi@designplox.co" href="https://designplox.com">Ali Zahid</author>
@@ -28,5 +28,7 @@
 	<plugin name="cordova-plugin-fcm" spec="~1.1.5"/>
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="StatusBarOverlaysWebView" value="false"/>
-	<hook type="before_prepare" src="scripts/artwork.js"/>
+	<plugin name="cordova-plugin-code-push" spec="~1.9.2-beta"/>
+	<preference name="CodePushDeploymentKey" value="CDkKXCZinXkzyBjem5n8shzh_orRVy5x7ifwM"/>
+	<hook src="scripts/artwork.js" type="before_prepare"/>
 </widget>
