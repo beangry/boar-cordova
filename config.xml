@@ -40,7 +40,6 @@
 
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="StatusBarOverlaysWebView" value="false"/>
-	<preference name="CodePushDeploymentKey" value="CDkKXCZinXkzyBjem5n8shzh_orRVy5x7ifwM"/>
 
 	<hook src="scripts/artwork.js" type="before_prepare"/>
 </widget>
