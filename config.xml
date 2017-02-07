@@ -20,8 +20,6 @@
 	<platform name="ios">
 		<allow-intent href="itms:*"/>
 		<allow-intent href="itms-apps:*"/>
-		<preference name="StatusBarBackgroundColor" value="#FFFFFF"/>
-		<preference name="StatusBarStyle" value="default"/>
 	</platform>
 
 	<engine name="ios" spec="~4.3.1"/>
@@ -40,6 +38,7 @@
 
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="StatusBarOverlaysWebView" value="false"/>
+	<preference name="StatusBarStyle" value="default"/>
 
 	<hook src="scripts/artwork.js" type="before_prepare"/>
 </widget>
