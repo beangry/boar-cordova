@@ -16,10 +16,12 @@
 	<platform name="android">
 		<allow-intent href="market:*"/>
 		<preference name="android-minSdkVersion" value="19"/>
+		<preference name="CodePushDeploymentKey" value="GT1h1x8VzuXtif-19b5tnUDhWUy-Vy5x7ifwM"/>
 	</platform>
 	<platform name="ios">
 		<allow-intent href="itms:*"/>
 		<allow-intent href="itms-apps:*"/>
+		<preference name="CodePushDeploymentKey" value="_gF8qYnUVD_HtW2RgC0G0EjnsS-fVy5x7ifwM"/>
 	</platform>
 
 	<engine name="ios" spec="~4.3.1"/>
